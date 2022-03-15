@@ -103,30 +103,32 @@ function valueX(value, chosenXAxis) {
 // Function for updating circles group
 function updateToolTip(chosenXAxis, chosenYAxis, circlesGroup) {
 
+    // overty
     if (chosenXAxis === 'poverty') {
       var xLabel = 'Poverty:';
     }
-
+    //income
     else if (chosenXAxis === 'income'){
       var xLabel = 'Median Income:';
     }
+    //age
     else {
       var xLabel = 'Age:';
     }
 //Y label
-
+  //healthcare
   if (chosenYAxis ==='healthcare') {
     var yLabel = "No Healthcare:"
   }
   else if(chosenYAxis === 'obesity') {
     var yLabel = 'Obesity:';
   }
-
+  //smoking
   else{
     var yLabel = 'Smokers:';
   }
 
-  // Create tooltip
+  //create tooltip
   var toolTip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-8, 0])
